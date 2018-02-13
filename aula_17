@@ -1,0 +1,39 @@
+repetir ='s'
+mercad = [ ]
+valor = [ ]
+total = 0
+valid_preco = False
+
+print('Seja bem vindo à nossa loja! Aperte ENTER para comprar!')
+input()
+
+while repetir == 's' :
+    produto=input('Qual produto deseja adicionar ao carrinho? ')
+    mercad.append(produto)
+
+    
+    while valid_preco == False:
+           preco=(input('Quanto esse produto custa? '))
+           try:
+               preco = float(preco)
+               if preco <= 0:
+                   print('O preço precisa ser maior que zero.')
+               else:
+                    valid_preco = True
+           except:
+               print("Formato de preço inválido! Use apenas números e separe os centavos com '.'")
+                
+    valor.append(preco)
+    valid_preco = False
+    repetir=input('Deseja adicionar outro produto? S ou N? ').lower()
+
+
+print('Produtos comprados:')   
+for i in valor:
+    total += i
+for i in mercad:
+    print(i)
+print('Total das mercadorias: R$' ,total)
+input('Aperte enter para sair.')
+    
+    
