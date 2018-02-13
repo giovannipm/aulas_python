@@ -1,0 +1,63 @@
+pesoprova1 = False
+validapeso1 = False
+pesoprova2 = False
+validapeso2 = False
+notaprova1 = False
+validanota1 = False
+notaprova2 = False
+validanota2 = False
+
+##após a correção do exercício, ficou evidente que não havia necessidade de criar diversas
+##variáveis para validar, tendo em vista que todas validavam a mesma coisa
+##para ficar melhor organizado, poderia ser criado uma variável para as notas
+##e outras para o peso
+
+while validapeso1 == False:
+    pesoprova1=input('Qual o peso da prova 1? Informar números de 0 a 10.')
+    try:
+            pesoprova1 = float(pesoprova1)
+            if pesoprova1 < 0 or pesoprova1 > 10:
+                    print('O valor deve ser número e compreendido entre 0 e 10.')
+            else:
+                validapeso1 = True
+    except:
+        print('Formato de preço inválido, digite apenas valores numéricos.')
+
+while validapeso2 == False:
+    pesoprova2=input('Qual o peso da prova 2? Informar números de 0 a 10.')
+    try:
+            pesoprova2 = float(pesoprova2)
+            if pesoprova2 < 0 or pesoprova2 > 10:
+                    print('O valor deve ser número e compreendido entre 0 e 10.')
+            else:
+                validapeso2 = True
+    except:
+        print('Formato de preço inválido, digite apenas valores numéricos.')
+
+while validanota1 == False:
+    notaprova1=input('Qual a nota da prova 1? Informar números de 0 a 10.')
+    try:
+            notaprova1 = float(notaprova1)
+            if notaprova1 < 0 or notaprova1 > 10:
+                    print('O valor deve ser número e compreendido entre 0 e 10.')
+            else:
+                validanota1 = True
+    except:
+        print('Formato de preço inválido, digite apenas valores numéricos.')
+
+while validanota2 == False:
+    notaprova2=input('Qual a nota da prova 2? Informar números de 0 a 10.')
+    try:
+            notaprova2 = float(notaprova2)
+            if notaprova2 < 0 or notaprova2 > 10:
+                    print('O valor deve ser número e compreendido entre 0 e 10.')
+            else:
+                validanota2 = True
+    except:
+        print('Formato de preço inválido, digite apenas valores numéricos.')
+
+print('Nota 1:' ,notaprova1 ,'Peso da prova 1:' ,pesoprova1)
+print('Nota 2:' ,notaprova2 ,'Peso da prova 2:' ,pesoprova2)
+media=((notaprova1*pesoprova1) + (notaprova2*pesoprova2)) / (pesoprova1+pesoprova2)
+print('Média Ponderada:' ,media)
+input('Aperte enter para sair.')
