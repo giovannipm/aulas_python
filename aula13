@@ -1,0 +1,22 @@
+nome=input('Qual o seu nome? ').lower()
+p1=float(input('Nota da P1? '))
+p2=float(input('Nota da P2? '))
+faltas=float(input('Número de faltas no semestre? '))
+media=((p1+p2) / 2)
+testa_faltas=((faltas / 20) * 100)
+assiduidade=(100 - testa_faltas)
+
+if faltas > 6 and media < 6:
+            print ('REPROVADO POR FALTA E MÉDIA! Sua média:' ,media ,'Percentual de presença:' ,assiduidade)
+elif faltas < 6 and media < 6:
+            print('REPROVADO ABAIXO DA MÉDIA! Sua média:' ,media ,'Percentual de presença:' ,assiduidade)
+
+elif faltas > 6 and media > 6:
+            print('REPROVADO POR FALTAS! Sua média:' ,media , 'Percentual de presença:' ,assiduidade)
+
+elif faltas < 6 and media > 6:
+            print('APROVADO! Sua média:' ,media ,'Percentual de presença:' ,assiduidade)
+
+input('Aperte enter para sair.')
+
+                             
